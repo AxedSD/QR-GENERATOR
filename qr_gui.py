@@ -100,7 +100,8 @@ class AppQR(ctk.CTk):
         self.fuente_normal = ctk.CTkFont(size=14)
         self.fuente_boton = ctk.CTkFont(size=16, weight="bold")
 
-        self.grid_columnconfigure(0, weight=1)
+        # uniform makes both cards the same width, so they don't jump around while you type
+        self.grid_columnconfigure((0, 1), weight=1, uniform="tarjetas")
         self.grid_rowconfigure(1, weight=1)
 
         self.crear_encabezado()
